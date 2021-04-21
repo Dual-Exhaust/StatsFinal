@@ -25,32 +25,26 @@ public class ChapterOneJListListener {
 					JList<String> list = (JList<String>) listSelectionEvent.getSource();
 					Object selectionValue = list.getSelectedValue();
 					if (selectionValue.getClass().getName().equals("java.lang.String")) {
-						switch ((String) selectionValue) {
-						case "Introduction":
-							image.setIcon(null);
-							text.setText("<html>" + Info.getChapterOneIntro() + "</html>");
-							break;
-						case "1.2":
-							try {
+						try {
+							switch ((String) selectionValue) {
+							case "Introduction":
+								image.setIcon(null);
+								text.setText(Info.getChapterOneIntro());
+								break;
+							case "1.2":
 								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterOneTwo()))));
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							text.setText("<html>" + Info.getChapterOneTwo() + "</html>");
-							break;
-						case "1.3":
-							try {
+								text.setText(Info.getChapterOneTwo());
+								break;
+							case "1.3":
 								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterOneThree()))));
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
+								text.setText(Info.getChapterOneThree());
+								break;
+							case "Summary":
+								image.setIcon(null);
+								text.setText(Info.getChapterOneSummary());
 							}
-							text.setText("<html>" + Info.getChapterOneThree() + "</html>");
-							break;
-						case "Summary":
-							image.setIcon(null);
-							text.setText("<html>" + Info.getChapterOneSummary() + "</html>");
+						} catch (IOException e) {
+							e.printStackTrace();
 						}
 					}
 				}

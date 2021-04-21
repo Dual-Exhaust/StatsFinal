@@ -23,36 +23,74 @@ public class ChapterTwoJListListener {
 					JList<String> list = (JList<String>) listSelectionEvent.getSource();
 					Object selectionValue = list.getSelectedValue();
 					if (selectionValue.getClass().getName().equals("java.lang.String")) {
-						switch ((String) selectionValue) {
-						case "Introduction":
-							image.setIcon(null);
-							text.setText("<html>" + Info.getChapterTwoIntro() + "</html>");
-							break;
-						case "2.3":
-							try {
+						try {
+							switch ((String) selectionValue) {
+							case "Introduction":
+								image.setIcon(null);
+								text.setText(Info.getChapterTwoIntro());
+								break;
+							case "2.3":
 								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoThree()))));
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
+								text.setText(Info.getChapterTwoThree());
+								break;
+							case "2.4":
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoFour()))));
+								text.setText(Info.getChapterTwoFour());
+								break;
+							case "2.5":
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoFive()))));
+								text.setText(Info.getChapterTwoFive());
+								break;
+							case "2.6":
+								image.setIcon(
+										null/* new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoSix()))) */);
+								text.setText(Info.getChapterTwoSix());
+								break;
+							case "2.7":
+								image.setIcon(
+										null/*
+											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoSeven())))
+											 */);
+								text.setText(Info.getChapterTwoSeven());
+								break;
+							case "2.8":
+								image.setIcon(
+										null/*
+											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoEight())))
+											 */);
+								text.setText(Info.getChapterTwoEight());
+								break;
+							case "2.9":
+								image.setIcon(
+										null/* new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoNine()))) */);
+								text.setText(Info.getChapterTwoNine());
+								break;
+							case "2.10":
+								image.setIcon(
+										null/* new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoTen()))) */);
+								text.setText(Info.getChapterTwoTen());
+								break;
+							case "2.11":
+								image.setIcon(
+										null/*
+											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoEleven())))
+											 */);
+								text.setText(Info.getChapterTwoEleven());
+								break;
+							case "2.12":
+								image.setIcon(
+										null/*
+											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoTwelve())))
+											 */);
+								text.setText(Info.getChapterTwoTwelve());
+								break;
+							case "Summary":
+								image.setIcon(null);
+								text.setText(Info.getChapterTwoSummary());
+								break;
 							}
-							text.setText("<html>" + Info.getChapterTwoThree() + "</html>");
-							break;
-						case "2.4":
-							image.setIcon(null);
-							text.setText("<html>" + Info.getChapterTwoFour() + "</html>");
-							break;
-						case "2.5":
-							image.setIcon(null);
-							text.setText("<html>" + Info.getChapterTwoFive() + "</html>");
-							break;
-						case "2.6":
-							image.setIcon(null);
-							text.setText("<html>" + Info.getChapterTwoSix() + "</html>");
-							break;
-						case "Summary":
-							image.setIcon(null);
-							text.setText("<html>" + Info.getChapterTwoSummary() + "</html>");
-							break;
+						} catch (IOException e) {
+							e.printStackTrace();
 						}
 					}
 				}

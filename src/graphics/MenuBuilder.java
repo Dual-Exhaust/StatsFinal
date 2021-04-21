@@ -66,6 +66,7 @@ public class MenuBuilder {
 				setPanelInvis(chapter3);
 				setPanelInvis(chapter4);
 				setPanelInvis(general);
+				setPanelInvis(paper);
 				setPanelVis(main);
 			}
 		});
@@ -121,10 +122,10 @@ public class MenuBuilder {
 			ChapterTwoJListListener.addListener(listPanelMenu, textPanelMenu, textPanelMenu2);
 			break;
 		case 3:
-			ChapterThreeJListListener.addListener(listPanelMenu, textPanelMenu);
+			ChapterThreeJListListener.addListener(listPanelMenu, textPanelMenu, textPanelMenu2);
 			break;
 		case 4:
-			ChapterFourJListListener.addListener(listPanelMenu, textPanelMenu);
+			ChapterFourJListListener.addListener(listPanelMenu, textPanelMenu, textPanelMenu2);
 			break;
 		}
 
@@ -149,34 +150,55 @@ public class MenuBuilder {
 		// ====================================================================================================
 		// Initialization
 		chapter2 = new JPanel();
-		createChapterPanel(chapter2, 2, new String[] { "Introduction", "2.3", "2.4", "2.5", "2.6", "Summary" });
+		createChapterPanel(chapter2, 2, new String[] { "Introduction", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9",
+				"2.10", "2.11", "2.12", "Summary" });
 		// ====================================================================================================
 
 		// Chapter 3 Panel
 		// ====================================================================================================
 		// Initialization
 		chapter3 = new JPanel();
-		createChapterPanel(chapter3, 3, new String[] { "Hello", "It", "Is", "Time", "For", "Stats" });
+		createChapterPanel(chapter3, 3, new String[] { "Introduction", "3.2", "3.3", "3.4", "3.5", "3.7", "3.8", "3.9",
+				"3.10", "3.11", "Summary" });
 		// ====================================================================================================
 
 		// Chapter 4 Panel
 		// ====================================================================================================
 		// Initialization
 		chapter4 = new JPanel();
-		createChapterPanel(chapter4, 4, new String[] { "Hello", "It", "Is", "Time", "For", "Stats" });
+		createChapterPanel(chapter4, 4, new String[] { "Introduction", "4.2", "4.3", "4.4", "Summary" });
 		// ====================================================================================================
 		// ====================================================================================================
+
+		// Button to include paper
 		// ====================================================================================================
 		paper = new JPanel();
 		paper.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		setPanelInvis(paper);
 
-		JButtonBlackRed btnPaperMenu = new JButtonBlackRed("Main Menu");
-		backToMenu(btnPaperMenu);
-		chapter4.add(btnPaperMenu);
+		// Button to go back to the main menu
+		JButtonBlackRed btnPanelMenu = new JButtonBlackRed("Main Menu");
+		backToMenu(btnPanelMenu);
+		paper.add(btnPanelMenu);
 		// ====================================================================================================
 
-		//
+		// Creates elements inside our general information tab
+		// ====================================================================================================
+		general = new JPanel();
+		general.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		setPanelInvis(general);
+
+		JLabel generalInformation = new JLabel();
+		generalInformation.setPreferredSize(new Dimension(500, 500));
+		generalInformation.setText("<html>" + Info.getGeneralInfo() + "</html>");
+		general.add(generalInformation);
+
+		// Button to go back to the main menu
+		JButtonBlackRed btnPanelGeneral = new JButtonBlackRed("Main Menu");
+		backToMenu(btnPanelGeneral);
+		general.add(btnPanelGeneral);
+		// ====================================================================================================
+
 	}
 
 	// Creates the buttons that will navigate to each chapter
@@ -227,10 +249,6 @@ public class MenuBuilder {
 		});
 		main.add(btnExit);
 
-		JLabel generalInformation = new JLabel();
-		generalInformation.setPreferredSize(new Dimension(500, 500));
-		generalInformation.setText("<html>" + Info.getGeneralInfo() + "</html>");
-		main.add(generalInformation);
 		// ====================================================================================================
 
 		return new JPanel[] { main, chapter1, chapter2, chapter3, chapter4, paper, general };
