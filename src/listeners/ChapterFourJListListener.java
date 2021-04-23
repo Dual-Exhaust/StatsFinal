@@ -1,12 +1,16 @@
 package listeners;
 
+import java.io.File;
 import java.io.IOException;
 
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import graphics.images.StatsGraphs;
 import info.Info;
 
 public class ChapterFourJListListener {
@@ -26,25 +30,8 @@ public class ChapterFourJListListener {
 								text.setText(Info.getChapterFourIntro());
 								break;
 							case "4.2":
-								image.setIcon(null /*
-													 * new ImageIcon(ImageIO.read(new
-													 * File(StatsGraphs.getChapterFourTwo())))
-													 */);
-								text.setText(Info.getChapterFourFour());
-								break;
-							case "4.3":
-								image.setIcon(
-										null/*
-											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterFourThree())))
-											 */);
-								text.setText(Info.getChapterFourFour());
-								break;
-							case "4.4":
-								image.setIcon(null /*
-													 * new ImageIcon(ImageIO.read(new
-													 * File(StatsGraphs.getChapterFourFour())))
-													 */);
-								text.setText(Info.getChapterFourFour());
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterFourTwo()))));
+								text.setText(Info.getChapterFourTwo());
 								break;
 							case "Summary":
 								image.setIcon(null);

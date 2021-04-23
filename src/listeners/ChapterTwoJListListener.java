@@ -42,47 +42,24 @@ public class ChapterTwoJListListener {
 								text.setText(Info.getChapterTwoFive());
 								break;
 							case "2.6":
-								image.setIcon(
-										null/* new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoSix()))) */);
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoSix()))));
 								text.setText(Info.getChapterTwoSix());
 								break;
 							case "2.7":
-								image.setIcon(
-										null/*
-											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoSeven())))
-											 */);
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoSeven()))));
 								text.setText(Info.getChapterTwoSeven());
 								break;
 							case "2.8":
-								image.setIcon(
-										null/*
-											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoEight())))
-											 */);
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoEight()))));
 								text.setText(Info.getChapterTwoEight());
 								break;
 							case "2.9":
-								image.setIcon(
-										null/* new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoNine()))) */);
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoNine()))));
 								text.setText(Info.getChapterTwoNine());
 								break;
 							case "2.10":
-								image.setIcon(
-										null/* new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoTen()))) */);
+								image.setIcon(new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoTen()))));
 								text.setText(Info.getChapterTwoTen());
-								break;
-							case "2.11":
-								image.setIcon(
-										null/*
-											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoEleven())))
-											 */);
-								text.setText(Info.getChapterTwoEleven());
-								break;
-							case "2.12":
-								image.setIcon(
-										null/*
-											 * new ImageIcon(ImageIO.read(new File(StatsGraphs.getChapterTwoTwelve())))
-											 */);
-								text.setText(Info.getChapterTwoTwelve());
 								break;
 							case "Summary":
 								image.setIcon(null);

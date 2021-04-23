@@ -92,12 +92,12 @@ public class MenuBuilder {
 		// Scrollpane is initialized with the JList and is added to the panel to be
 		// displayed
 		JScrollPane panePanelMenu = new JScrollPane(listPanelMenu);
-		panePanelMenu.setPreferredSize(new Dimension(200, 502));
+		panePanelMenu.setPreferredSize(new Dimension(200, 800));
 		panel.add(panePanelMenu, BorderLayout.LINE_START);
 
 		// JLabel to display our output for each selected index in the JList
 		JLabel textPanelMenu = new JLabel();
-		textPanelMenu.setPreferredSize(new Dimension(942, 502));
+		textPanelMenu.setPreferredSize(new Dimension(1100, 800));
 		textPanelMenu.setBorder(BorderFactory.createLineBorder(Color.RED));
 		panel.add(textPanelMenu, BorderLayout.CENTER);
 
@@ -108,7 +108,7 @@ public class MenuBuilder {
 
 		// JLabel to display our output for each selected index in the JList
 		JLabel textPanelMenu2 = new JLabel();
-		textPanelMenu2.setPreferredSize(new Dimension(742, 300));
+		textPanelMenu2.setPreferredSize(new Dimension(584, 300));
 		textPanelMenu2.setBorder(BorderFactory.createLineBorder(Color.BLUE));
 		panel.add(textPanelMenu2, BorderLayout.LINE_END);
 
@@ -150,23 +150,23 @@ public class MenuBuilder {
 		// ====================================================================================================
 		// Initialization
 		chapter2 = new JPanel();
-		createChapterPanel(chapter2, 2, new String[] { "Introduction", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9",
-				"2.10", "2.11", "2.12", "Summary" });
+		createChapterPanel(chapter2, 2,
+				new String[] { "Introduction", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9", "2.10", "Summary" });
 		// ====================================================================================================
 
 		// Chapter 3 Panel
 		// ====================================================================================================
 		// Initialization
 		chapter3 = new JPanel();
-		createChapterPanel(chapter3, 3, new String[] { "Introduction", "3.2", "3.3", "3.4", "3.5", "3.7", "3.8", "3.9",
-				"3.10", "3.11", "Summary" });
+		createChapterPanel(chapter3, 3,
+				new String[] { "Introduction", "3.2", "3.3", "3.4", "3.5", "3.7", "3.8", "3.11", "Summary" });
 		// ====================================================================================================
 
 		// Chapter 4 Panel
 		// ====================================================================================================
 		// Initialization
 		chapter4 = new JPanel();
-		createChapterPanel(chapter4, 4, new String[] { "Introduction", "4.2", "4.3", "4.4", "Summary" });
+		createChapterPanel(chapter4, 4, new String[] { "Introduction", "4.2", "Summary" });
 		// ====================================================================================================
 		// ====================================================================================================
 
@@ -175,6 +175,11 @@ public class MenuBuilder {
 		paper = new JPanel();
 		paper.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		setPanelInvis(paper);
+
+		JLabel findings = new JLabel();
+		findings.setPreferredSize(new Dimension(1000, 1000));
+		findings.setText(Info.getPaper());
+		paper.add(findings);
 
 		// Button to go back to the main menu
 		JButtonBlackRed btnPanelMenu = new JButtonBlackRed("Main Menu");

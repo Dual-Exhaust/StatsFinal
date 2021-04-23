@@ -1,10 +1,27 @@
 package info;
 
 public class Info {
+	public static String getPaper() {
+		return "<html> <h2> Findings </h2> <h3> League of Legends Statistics </h3> <h3> Tom Olandt and Kyle Sacco </h3> <p> For our project, we investigated statistics of and relating to League of Legends and when possible, the eSports team 100 Thieves. Throughout we investigate stats from LCS (League of Legends Championship Series) Spring 2021 and of mechanics for season 11. This can relate to what type rift each map can be, dragon spawns, jungle pathing and 100T performance over the 18 games of statistics that we pulled. We compiled statistics this split from gol.gg and basic information from lol.fandom.com to aid us in creating a program that summarizes all the data and utilizes content learned from each section gone over in class. This project can be found at https://github.com/Dual-Exhaust/StatsFinal. \r\n"
+				+ "From Chapter One, we looked at gold, kills and towers taken per game by 100 Thieves. The most seen range of gold was between 55.4 thousand and 59.4 thousand gold at 18% of games. Just under half of the games saw a gold range between 51.4 thousand and 63.4 thousand gold. For the same games, the mean number of kills is 13.2222 with standard deviation 6.4402. With towers taken, the mean is 6.6111 with a variance of 18.2516 and standard deviation 4.2721. Demonstrated in the project is a relative frequency histogram for total gold earned by 100 Thieves which shows the information best.\r\n"
+				+ "With Chapter Two, many different topics of statistics were covered. We used set notation and discrete samples as well as conditional probabilities to discuss probabilities relating to dragon spawns. There are 24 total events within the discrete sample space of the first three dragon spawns. We only looked at the first three because the third dragon to spawn decides which type of rift the current game will have. These specific statistics matter because some team compositions will benefit more with certain types of dragon rotations and rifts. It was proven that any given dragon has an equal chance of spawning first at 25%, and the probability that any two dragons A and B spawn in the order of dragon A before dragon B is also 25%. Given that a specific dragon spawned already though, the probability of a specific rift occurring is only 33.33%. Suppose 100 Thieves is playing a team composition that benefits from an early cloud drake and then a mountain soul buff or mountain rift. Using the multiplicative law of probability, we know that the chance of this happening is 8.25%. On top of this, using the additive law of probability we can calculate that the odds of the first dragon being a cloud drake or the third dragon being a mountain drake to be 41.75%. 100 Thieves can use this data to help develop their game plan going into any given match. Additionally, the Law of Total Probability can be used to find how likely 100 Thieves is to kill the first dragon based off the data from the LCS Spring 2021 split, which is approximately 73%. Knowing this, we can apply Bayes’ Rule to find out the probability of the first dragon being any specific dragon if we already know that 100 Thieves killed it. The probability that this occurs is 31%.\r\n"
+				+ "We also used the Event-Composition Method to determine the probability that 100 Thieves would win a match using data from the Spring split. Side selection for LCS games is determined by one of the two teams. This is a powerful choice because it decides who gets the first/last pick of champions which can be a powerful tool. In the Spring split each team will pick sides once per opponent, and each opponent will choose sides in the other match. When given side selection this split, 100T always chose Blue side. Their opponents this split gave 100T Blue side 22.22% of the games. Using this information, it was found that 100 Thieves is 39% likely to get red side if the team to pick side selection was determined randomly with equal probability. Knowing this, we can use the win rate data from the split to help determine the likeliness that 100 Thieves will win any given game. On blue side, they won, 54.54% of games while on red side they won 71.42% of their games played. Given that the team with side selection is chosen randomly, and using the above data, it was found that the probability of 100 Thieves winning any game is about 61%. For the Spring split, 100 Thieves won 11 out of 18 games, which is 61.11%. This data matches because 100 Thieves chose sides 9 times and their opponents chose sides 9 times.\r\n"
+				+ "Chapter Three discusses many different types of probability distributions that utilize discrete random variables. Again, we looked at dragon spawn data, and the likelihood that 100 Thieves will kill the first dragon. A cloud drake has the possibility of spawning first, second, third or not at all. All positions have an equal chance at 25%. Knowing this we created Y’s probability distribution where Y is the position at which the cloud drake spawns. Using the distribution, we were able to solve for the variance of Y, which is 1.25 with a mean of 1.5.\r\n"
+				+ "Out of all 18 games that 100 Thieves played this split, they took first dragon 13 times. We created a binomial probability distribution, where either 100 Thieves gets the first dragon, or they don’t. Using this sample, we then solved for an estimate of the general probability p that 100 Thieves takes the first dragon in any match. This was found to be about 72.22% of the time. Using this information, we utilized a geometric probability distribution to figure out the probability that in a series of games with size n, where n >= 3, the first time 100 Thieves slays the first dragon of the match occurs in match 3. This has a 37.66% chance of happening, which is low. The odds of killing the first dragon for the first time in match 1 is about 72% and for match two it is about 52%. Killing the first dragon of the match can significantly put a team ahead of their opponent - if 100 Thieves has a higher probability of taking the first drake than their opponent, then they will have a better chance at winning the match.\r\n"
+				+ "Another factor that can significantly influence the outcome of a match is the amount of farm that a team can get. A jungler's route is very important to get right. All jungle camps respawn 2 minutes after being taken last, so the goal of the jungler is to minimize uptime of each camp. Using a Poisson Probability Distribution, we found that in a two-minute time period, if the average times a jungler visits a camp is 1 time, there is a 36.8% chance that the jungler will not visits any given jungle camp. This is extremely important to know because if you know the general whereabouts of your opponent jungler, then you can combine that in game knowledge with this probability to infer which enemy camps are still up or not. From there you can make an educated decision on which camps to take on your own side (or in the enemy jungle) and change your pathing accordingly.\r\n"
+				+ "In addition, the more kills a team can get, the more gold they will gain, and the better items they can buy. Teams that get a lot of kills in proportion to their opponent will have a much easier time in trying to win the game. As mentioned earlier, the number of kills per game by 100 Thieves has mean 13.2222 and standard deviation 6.4402. We can use this data in combination with Tchebysheff’s Theorem to find the minimum probability that the number of kills gotten by 100 Thieves in any game is between 6.2222 and 20.2222. This probability is at least 15.35%. \r\n"
+				+ "For hypergeometric probability distributions, we could not find a set of data or mechanic within the 100 Thieves Spring 2021 dataset to model a hypergeometric probability distribution, so we used the random champion selection mechanic of League's ARAM game mode. Using this, we calculated the probability of the game selecting 10 marksman champions for the players from the total 28 marksman in the game, if all 155 champions have a potential to be picked. This came out to be a probability of 8.002*10^(-9). Basically, this is such a small possibility that it will most likely never occur. The expected number of marksmen to show up in an ARAM draft is 1.81 if every champion has an equal chance of getting drafted.\r\n"
+				+ " As far as Chapter 4 goes, we could not find any relevant topics that could be modeled by a uniform probability distribution from our dataset, or league of legends in general, as most things are based on performance, not probability, or are discrete occurrences.\r\n"
+				+ "This paper is merely a summary of all the work put into this project. It is not all inclusive, as the project itself is, but it is a good reference for our findings while investigating League of Legends and the eSports team 100 Thieves. All images, graphs, equations, and explanations of the data created for and used in the project can be found inside the project itself.\r\n"
+				+ " This paper is being compiled into the project itself for ease of reference." + "</p> </html>";
+	}
+
 	public static String getGeneralInfo() {
 		return "<html> <h2> General Information </h2> <p> In the process of creating this project, statistics of and relating to League of Legends are investigated."
 				+ " When an eSports Team's statistics is viewed, it will be that of 100 Theives for the LCS Spring 2021 season. As for general game statistics, such"
-				+ " as dragon spawns, the mechanics analyzed will be those included for and as they functioned in Season 11. </p> </html>";
+				+ " as dragon spawns, the mechanics analyzed will be those included for and as they functioned in Season 11. Some sections have more in depth explanations"
+				+ " on the right hand side of the screen to explain more about about the mechanics and how they work within the scope of what we are investigating. We used <a href='https://gol.gg/teams/team-matchlist/1127/split-ALL/tournament-LCS%20Spring%202021/'>gol.gg</a> "
+				+ "and <a href='https://lol.fandom.com/wiki/100_Thieves/Match_History'>lol.fandom.com</a> as main sources for this project. We also used general information that we already knew about the game, considering that we both are degenerates and play this game too much. </p> </html>";
 	}
 
 	// Chapter One Info
@@ -51,11 +68,15 @@ public class Info {
 	}
 
 	public static String getChapterTwoFour() {
-		return "<html> <h2> 2.4 A Probabilistic Model For an Experiment: The Discrete Case </h2> <p> </p> </html>";
+		return "<html> <h2> 2.4 A Probabilistic Model For an Experiment: The Discrete Case </h2> <p> In 2.3 we take a look at the probability that the first dragon would "
+				+ "be an ocean drake. We use set notation in combination with a sample space of the possible combinations that the first three dragons can spawn. 6 of the "
+				+ "24 possible combinations had the ocean drake first, making the probability 25%. </p> </html>";
 	}
 
 	public static String getChapterTwoFive() {
-		return "<html> <h2> 2.5 Calculating the Probability of an Event: The Sample Point Method </h2> <p> </p> </html>";
+		return "<html> <h2> 2.5 Calculating the Probability of an Event: The Sample Point Method </h2> <p> Here we took a look at the probability of a mountain drake"
+				+ " spawning after a cloud drake. After inspecting all the sample-points it was found that there were 6 events out of the 24 total that which this occured, meaning that there"
+				+ " is a 25% chance of a mountain drake spawning after a cloud drake. </p> </html>";
 	}
 
 	public static String getChapterTwoSix() {
@@ -81,11 +102,13 @@ public class Info {
 	}
 
 	public static String getChapterTwoSeven() {
-		return "<html> <h2> 2.7 Conditional Probability and the Independence of Events </h2> <p> </p> </html>";
+		return "<html> <h2> 2.7 Conditional Probability and the Independence of Events </h2> <p> With conditional probability we are able to inspect events given something has already happened. "
+				+ "Given that the first dragon is an infernal drake, we solve here for the probability of an ocean rift occuring. Using the formula for conditional probability we were able to "
+				+ "find that the probability of it occuring was about 33.33%. Of the five games that 100T played where infernal drake came first, 0 were ocean rifts.</p> </html>";
 	}
 
 	public static String getChapterTwoEight() {
-		return "<html> <h2> 2.8 Two Laws of Probability </h2> <p> </p> </html>";
+		return "<html> <h2> 2.8 Two Laws of Probability </h2> <p>  </p> </html>";
 	}
 
 	public static String getChapterTwoNine() {
@@ -97,7 +120,14 @@ public class Info {
 	}
 
 	public static String getChapterTwoSummary() {
-		return "<html> <h2> Summary </h2> <p> </p> </html>";
+		return "<html> <h2> Summary </h2> <p> Chapter 2 mainly focuses on basic probabilities, and how to express them. It includes topics such as set notation, permutations/combinations, "
+				+ "conditional probability and similar areas of statistics. For most of the sections we used examples regarding how dragons spawn in League of Legends to demonstrate how to "
+				+ "calculate probabilities and the usefulness of knowing these probabilities. We chose this statistic because it is one of few League of Legends mechanics that is random, and "
+				+ "not based on performance. For example, we used this data to evaluate how effective 100T are at capturing the first dragon in a game over the season and determined that there "
+				+ "was a 71% likelihood that 100T would kill the first dragon in a game. We also noted that if a team were selected at random to choose a side for each game 100T would be likely "
+				+ "to play on the blue side for 61% of games. This is an impactful statistic, because blue side is generally considered to have an advantage because the map is more intuitive,"
+				+ " and it affords the team the first pick in the draft. We used various laws of probability, such as the multiplicative law and Bayes’ rule to express the probability of "
+				+ "different dragon rotations occurring, and how this information could be helpful to the team for drafting purposes. </p> </html>";
 	}
 
 	// Chapter Three Info
@@ -129,34 +159,41 @@ public class Info {
 
 	public static String getChapterThreeFive() {
 		return "<html> <h2> 3.5 The Geometric Probability Distribution </h2> <p> Using the general probability estimate from 3.4, we were able to calculate the probability of the first time "
-				+ "100T gets the first dragon being in the third game they play in a series of five games. We used the probabilities for if it were in the first game and second game to calculate this."
+				+ "100T gets the first dragon being in the third game they play in a series of five games. We used the probabilities for if it were in the first game and second game to calculate this. "
 				+ "It was found to be a lower chance, at 37.66%.</p> </html>";
 	}
 
 	public static String getChapterThreeSeven() {
-		return "<html> <h2> 3.7 The Hypergeometric Probability Distribution </h2> <p> </p> </html>";
+		return "<html> <h2> 3.7 The Hypergeometric Probability Distribution </h2> <p> We couldn't find a set of data or mechanic within the 100T Spring 2021 dataset to model a hypergeometric probability "
+				+ "distribution, so we used the random champion selection mechanic of League's ARAM gamemode. Using this, we calculated the probability of the game selecting 10 marksman champions for "
+				+ "the players from the total 28 marksman in the game, if all 155 champions have a potential to be picked. This came out to be a probability of 8.002*10^(-9). Basically, this is such a "
+				+ "small possibility that it will most likely never occur. "
+				+ "The expected number of marksmen to show up in an ARAM draft is 1.81 if every champion has an equal chance of getting drafted.</p> </html>";
 	}
 
 	public static String getChapterThreeEight() {
 		return "<html> <h2> 3.8 The Poisson Probability Distribution </h2> <p> We have to assume that Y possesses a Poisson Probability Distribution, and since we want to find the "
 				+ "probability of a jungler missing any given camp in the 2 minute time period we use Y = 0. Substituting our mean in for lambda gives us an equation that we can plug "
 				+ "Y into to find the probability of any given number of visits in the 2 minute time period. Plugging in 0 gives us a 36.8% chance that the jungler misses any given camp"
-				+ "in a 2 minute period of time.</p> </html>";
+				+ " in a 2 minute period of time.</p> </html>";
 	}
 
 	public static String getChapterThreeEleven() {
-		return "<html> <h2> 3.11 Tchebysheff's Theorem </h2> <p> </p> </html>";
+		return "<html> <h2> 3.11 Tchebysheff's Theorem </h2> <p> Using kills per game data, it was found that the mean amount of kills per game by 100T is 13.2222 with a standard "
+				+ "deviation of 6.4402. Using this data we can use Tchebysheff's Theorem to estimate the bottom line probability that the number of kills in any given match is between"
+				+ " 6.2222 and 20.2222. This probability is at least 15.35%. </p> </html>";
 	}
 
 	public static String getChapterThreeSummary() {
-		return "<html> <h2> Summary </h2> <p> In Chapter 3, we covered a lot of different probability distributions and were able to relate them to 100T and their performence in LCS Spring 2021. "
-				+ "</p> </html>";
+		return "<html> <h2> Summary </h2> <p> In Chapter 3, we covered a lot of different probability distributions and were able to relate them to 100T and their performance in LCS Spring 2021. "
+				+ "It was found that they have a very high chance of taking the first dragon in the match as well as having about a third of a chance that any jungler would miss a given camp in a two "
+				+ "minute period. Tchebysheff's also allowed us to figure out that there is at least a 15.35% chance that the amount of kills gotten by 100T is between 6.2222 and 20.2222. </p> </html>";
 	}
 
 	// Chapter Four Info
 	// =================================================================================
 	public static String getChapterFourIntro() {
-		return "<html> <h2> Introduction </h2> <p> </p> </html>";
+		return "<html> <h2> Introduction </h2> <p> In Chapter 4 we take a look at continuous random variables and the statistics that we can relate to them. </p> </html>";
 	}
 
 	public static String getChapterFourTwo() {
@@ -165,15 +202,8 @@ public class Info {
 				+ "distribution function graphically. </p> </html>";
 	}
 
-	public static String getChapterFourThree() {
-		return "<html> <h2> 4.3 Expected Values For Continuous Random Variables </h2> <p> </p> </html>";
-	}
-
-	public static String getChapterFourFour() {
-		return "<html> <h2> 4.4 The Uniform Probability Distribution </h2> <p> </p> </html>";
-	}
-
 	public static String getChapterFourSummary() {
-		return "<html> <h2> Summary </h2> <p> </p> </html>";
+		return "<html> <h2> Summary </h2> <p> In 4.2 we took a look at distribution functions for continuous variables and created one ourselves. We couldn't find any relevant topics that could be modeled "
+				+ "by a uniform probability distribution from our dataset, or league of legends in general, as most things are based on performance, not probability, or are discrete occurances.</p> </html>";
 	}
 }
